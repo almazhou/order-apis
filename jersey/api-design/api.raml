@@ -1,0 +1,11 @@
+#%RAML 0.8
+title: Order System
+mediaType: application/json
+/products:
+  get:
+    description: As a user, I'd like to see all the products online so that I can choose different products.
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include example/products.json
