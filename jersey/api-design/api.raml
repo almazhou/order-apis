@@ -9,3 +9,11 @@ mediaType: application/json
         body:
           application/json:
             example: !include example/products.json
+  /{product_id}:
+    get:
+      description: As a user, I'd like to see one of the products because I would like to know more detail of this product.
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include example/product.json
