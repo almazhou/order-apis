@@ -8,7 +8,7 @@
     "description": "LV bags, luxury, life style",
     "price": {
       "amount": 33.0,
-      "currency": "$"
+      "currency": "USD"
     }
   },
   {
@@ -20,7 +20,7 @@
     "description": "T-shirt of the famous brand of Yishion, very comfortable and lasts very long time",
     "price": {
       "amount": 190.0,
-      "currency": "$"
+      "currency": "USD"
     }
   }
 ]

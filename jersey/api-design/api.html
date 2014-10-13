@@ -117,7 +117,7 @@
     "description": "LV bags, luxury, life style",
     "price": {
       "amount": 33.0,
-      "currency": "$"
+      "currency": "USD"
     }
   },
   {
@@ -129,7 +129,7 @@
     "description": "T-shirt of the famous brand of Yishion, very comfortable and lasts very long time",
     "price": {
       "amount": 190.0,
-      "currency": "$"
+      "currency": "USD"
     }
   }
 ]</code></pre></small></p></div></div></div></div></div></div></div><div class="panel panel-white"><div class=panel-heading><h4 class=panel-title><a class=collapsed data-toggle=collapse href=#panel__products__product_id_><span class=parent>/products</span>/{product_id}</a> <span class=methods><a href=# data-toggle=modal data-target=#_products__product_id__get><span class="badge badge_get">get</span></a></span></h4></div><div id=panel__products__product_id_ class="panel-collapse collapse"><div class=panel-body><div class=list-group><a href=# data-toggle=modal data-target=#_products__product_id__get class=list-group-item><span class="badge badge_get">get</span><div class=method_description><p>As a user, I&#39;d like to see one of the products because I would like to know more detail of this product.</p></div><div class=clearfix></div></a></div></div></div><div class="modal fade" tabindex=0 id=_products__product_id__get><div class=modal-dialog><div class=modal-content><div class=modal-header><button type=button class=close data-dismiss=modal aria-hidden=true>&times;</button><h4 class=modal-title id=myModalLabel><span class="badge badge_get">get</span> <span class=parent>/products</span>/{product_id}</h4></div><div class=modal-body><div class="alert alert-info"><p>As a user, I&#39;d like to see one of the products because I would like to know more detail of this product.</p></div><ul class="nav nav-tabs"><li class=active><a href=#_products__product_id__get_request data-toggle=tab>Request</a></li><li><a href=#_products__product_id__get_response data-toggle=tab>Response</a></li></ul><div class=tab-content><div class="tab-pane active" id=_products__product_id__get_request><h3>URI Parameters</h3><ul><li><strong>product_id</strong>: <em>required (string)</em></li></ul></div><div class=tab-pane id=_products__product_id__get_response><h2>HTTP status code <a href=http://httpstatus.es/200 target=_blank>200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><small><strong>Example</strong>:<pre><code>{
@@ -143,6 +143,14 @@
   "colors": ["RED","YELLOW","GREEN","PURPLE"],
   "price": {
     "amount": 33.0,
-    "currency": "$"
+    "currency": "USD"
   }
+}</code></pre></small></p></div></div></div></div></div></div></div><div class="panel panel-white"><div class=panel-heading><h4 class=panel-title><a class=collapsed data-toggle=collapse href=#panel__products__product_id__current_price><span class=parent>/products/{product_id}</span>/current_price</a> <span class=methods><a href=# data-toggle=modal data-target=#_products__product_id__current_price_get><span class="badge badge_get">get</span></a></span></h4></div><div id=panel__products__product_id__current_price class="panel-collapse collapse"><div class=panel-body><div class=list-group><a href=# data-toggle=modal data-target=#_products__product_id__current_price_get class=list-group-item><span class="badge badge_get">get</span><div class=method_description><p>As a user, I&#39;d like to know the current price of this product so that I can decide if it is too expensive.</p></div><div class=clearfix></div></a></div></div></div><div class="modal fade" tabindex=0 id=_products__product_id__current_price_get><div class=modal-dialog><div class=modal-content><div class=modal-header><button type=button class=close data-dismiss=modal aria-hidden=true>&times;</button><h4 class=modal-title id=myModalLabel><span class="badge badge_get">get</span> <span class=parent>/products/{product_id}</span>/current_price</h4></div><div class=modal-body><div class="alert alert-info"><p>As a user, I&#39;d like to know the current price of this product so that I can decide if it is too expensive.</p></div><ul class="nav nav-tabs"><li class=active><a href=#_products__product_id__current_price_get_request data-toggle=tab>Request</a></li><li><a href=#_products__product_id__current_price_get_response data-toggle=tab>Response</a></li></ul><div class=tab-content><div class="tab-pane active" id=_products__product_id__current_price_get_request><h3>URI Parameters</h3><ul><li><strong>product_id</strong>: <em>required (string)</em></li></ul></div><div class=tab-pane id=_products__product_id__current_price_get_response><h2>HTTP status code <a href=http://httpstatus.es/200 target=_blank>200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><small><strong>Example</strong>:<pre><code>{
+	"id":1,
+	"uri":"/products/1/current_price",
+	"price":{
+		"amount":340,
+		"currency":"USD"
+	},
+	"time":"2014-5-12 12:30:59"
 }</code></pre></small></p></div></div></div></div></div></div></div></div></div></div></div><div class=col-md-3><div id=sidebar class="hidden-print affix" role=complementary><ul class="nav nav-pills nav-stacked"><li><a href=#_products>/products</a></li></ul></div></div></div></div></body></html>

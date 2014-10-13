@@ -9,6 +9,6 @@
   "colors": ["RED","YELLOW","GREEN","PURPLE"],
   "price": {
     "amount": 33.0,
-    "currency": "$"
+    "currency": "USD"
   }
 }
