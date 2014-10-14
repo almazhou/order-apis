@@ -41,4 +41,12 @@ mediaType: application/json
           200:
             body:
               application/json:
-                example: !include example/pricings.json        
+                example: !include example/pricings.json
+      /{pricing_id}:
+        get:
+          description: As a admin, I'd like to know one specific pricing of this product.
+          responses:
+            200:
+              body:
+                application/json:
+                  example: !include example/pricing.json        
