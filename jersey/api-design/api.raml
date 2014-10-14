@@ -26,6 +26,10 @@ mediaType: application/json
           body:
             application/json:
               example: !include example/product.json
+    delete:
+      description: As a admin, I'd like to delete specific product when I don't want to sell this product any more.
+      responses:
+        204:
     /current_price:
       get:
         description: As a user, I'd like to know the current price of this product so that I can decide if it is too expensive.
