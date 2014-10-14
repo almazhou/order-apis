@@ -68,4 +68,20 @@ mediaType: application/json
         body:
           application/json:
             example: !include example/customer.json
+  /orders:
+    get:
+      description: As a customer, I'd like to see all my orders that I have purchased so that I can know the historical records of my purchase.
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include example/orders.json
+    post:
+      description: As a customer, I'd like to place one order so that I can buy several products in one order.
+      body:
+        application/json:
+          example: !include example/orders_post.json
+          schema: !include schema/orders_post.json
+      responses:
+        201:
 
