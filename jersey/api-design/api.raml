@@ -60,3 +60,12 @@ mediaType: application/json
               body:
                 application/json:
                   example: !include example/pricing.json        
+/customers/{customer_id}:
+  get:
+    description: As a customer, I'd like to know my profile so that I can know if my account is correct.
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include example/customer.json
+
