@@ -1,5 +1,6 @@
 {
 	"id":1,
+	"productId":1,
 	"uri":"/products/1/current_price",
 	"price":{
 		"amount":340,
