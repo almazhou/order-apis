@@ -34,4 +34,11 @@ mediaType: application/json
             body:
               application/json:
                 example: !include example/current_price.json
-        
+    /pricings:
+      get:
+        description: As a admin, I'd like to know all the historical pricings of this product so that I can deside which one to be the current price.
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include example/pricings.json        

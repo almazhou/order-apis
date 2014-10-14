@@ -202,4 +202,25 @@
 		"currency":"USD"
 	},
 	"time":"2014-5-12 12:30:59"
-}</code></pre></small></p></div></div></div></div></div></div></div></div></div></div></div><div class=col-md-3><div id=sidebar class="hidden-print affix" role=complementary><ul class="nav nav-pills nav-stacked"><li><a href=#_products>/products</a></li></ul></div></div></div></div></body></html>
+}</code></pre></small></p></div></div></div></div></div></div></div><div class="panel panel-white"><div class=panel-heading><h4 class=panel-title><a class=collapsed data-toggle=collapse href=#panel__products__product_id__pricings><span class=parent>/products/{product_id}</span>/pricings</a> <span class=methods><a href=# data-toggle=modal data-target=#_products__product_id__pricings_get><span class="badge badge_get">get</span></a></span></h4></div><div id=panel__products__product_id__pricings class="panel-collapse collapse"><div class=panel-body><div class=list-group><a href=# data-toggle=modal data-target=#_products__product_id__pricings_get class=list-group-item><span class="badge badge_get">get</span><div class=method_description><p>As a admin, I&#39;d like to know all the historical pricings of this product so that I can deside which one to be the current price.</p></div><div class=clearfix></div></a></div></div></div><div class="modal fade" tabindex=0 id=_products__product_id__pricings_get><div class=modal-dialog><div class=modal-content><div class=modal-header><button type=button class=close data-dismiss=modal aria-hidden=true>&times;</button><h4 class=modal-title id=myModalLabel><span class="badge badge_get">get</span> <span class=parent>/products/{product_id}</span>/pricings</h4></div><div class=modal-body><div class="alert alert-info"><p>As a admin, I&#39;d like to know all the historical pricings of this product so that I can deside which one to be the current price.</p></div><ul class="nav nav-tabs"><li class=active><a href=#_products__product_id__pricings_get_request data-toggle=tab>Request</a></li><li><a href=#_products__product_id__pricings_get_response data-toggle=tab>Response</a></li></ul><div class=tab-content><div class="tab-pane active" id=_products__product_id__pricings_get_request><h3>URI Parameters</h3><ul><li><strong>product_id</strong>: <em>required (string)</em></li></ul></div><div class=tab-pane id=_products__product_id__pricings_get_response><h2>HTTP status code <a href=http://httpstatus.es/200 target=_blank>200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><small><strong>Example</strong>:<pre><code>[
+  {
+    "id": 1,
+    "productId": 1,
+    "uri": "/products/1/pricings/1",
+    "price": {
+      "amount": 23.0,
+      "currency": "USD"
+    },
+    "modifiedTime": "2014-5-7"
+  },
+  {
+    "id": 2,
+    "productId": 1,
+    "uri": "/products/1/pricings/2",
+    "price": {
+      "amount": 78.0,
+      "currency": "USD"
+    },
+    "modifiedTime": "2014-8-9"
+  }
+]</code></pre></small></p></div></div></div></div></div></div></div></div></div></div></div><div class=col-md-3><div id=sidebar class="hidden-print affix" role=complementary><ul class="nav nav-pills nav-stacked"><li><a href=#_products>/products</a></li></ul></div></div></div></div></body></html>
