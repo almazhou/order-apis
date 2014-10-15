@@ -7,5 +7,6 @@
     "amount": 35.0,
     "currency": "CNY"
   },
-  "quantity": 1
+  "quantity": 1,
+  "status":"pending"
 }
