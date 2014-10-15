@@ -84,4 +84,42 @@ mediaType: application/json
           schema: !include schema/orders_post.json
       responses:
         201:
+    /{order_id}:
+      get:
+        description: As a customer, I'd like to see specific order so that I know the detailed info of this order.
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include example/order.json
+      delete:
+        description: As a customer, I'd like to delete one of my active orders when I don't want to purchase this order any more.
+        responses:
+          204:
+      /orderItems:
+        get:
+          description: As a customer, I'd like to see all the order items that I have engaged in my order so that I can know if I have bought all what I need.
+          responses:
+            200:
+              body:
+                application/json:
+                  example: !include example/orderItems.json
+        post:
+          description: As a customer, I'd like to add one order item to my order.
+          body:
+            application/json:
+              example: !include example/order_item_post.json
+        delete:
+          description: As a customer, I'd like to delete one of my order items when I don't want this order Item to be bought.
+          responses:
+            204:
+        /{order_item_id}:
+          get:
+            description: As a customer, I'd like to see one of the specific order item in my order so that I can see the detailed info of this order item.
+            responses:
+              200:
+                body:
+                  application/json:
+                    example: !include example/orderItem.json
+
 

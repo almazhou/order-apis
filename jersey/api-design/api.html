@@ -246,36 +246,45 @@
 	"level":"normal",
 	"address":"xx street xx block xx number"
 }</code></pre></small></p></div></div></div></div></div></div></div><div class="panel panel-white"><div class=panel-heading><h4 class=panel-title><a class=collapsed data-toggle=collapse href=#panel__customers__customer_id__orders><span class=parent>/customers/{customer_id}</span>/orders</a> <span class=methods><a href=# data-toggle=modal data-target=#_customers__customer_id__orders_get><span class="badge badge_get">get</span></a> <a href=# data-toggle=modal data-target=#_customers__customer_id__orders_post><span class="badge badge_post">post</span></a></span></h4></div><div id=panel__customers__customer_id__orders class="panel-collapse collapse"><div class=panel-body><div class=list-group><a href=# data-toggle=modal data-target=#_customers__customer_id__orders_get class=list-group-item><span class="badge badge_get">get</span><div class=method_description><p>As a customer, I&#39;d like to see all my orders that I have purchased so that I can know the historical records of my purchase.</p></div><div class=clearfix></div></a> <a href=# data-toggle=modal data-target=#_customers__customer_id__orders_post class=list-group-item><span class="badge badge_post">post</span><div class=method_description><p>As a customer, I&#39;d like to place one order so that I can buy several products in one order.</p></div><div class=clearfix></div></a></div></div></div><div class="modal fade" tabindex=0 id=_customers__customer_id__orders_get><div class=modal-dialog><div class=modal-content><div class=modal-header><button type=button class=close data-dismiss=modal aria-hidden=true>&times;</button><h4 class=modal-title id=myModalLabel><span class="badge badge_get">get</span> <span class=parent>/customers/{customer_id}</span>/orders</h4></div><div class=modal-body><div class="alert alert-info"><p>As a customer, I&#39;d like to see all my orders that I have purchased so that I can know the historical records of my purchase.</p></div><ul class="nav nav-tabs"><li class=active><a href=#_customers__customer_id__orders_get_request data-toggle=tab>Request</a></li><li><a href=#_customers__customer_id__orders_get_response data-toggle=tab>Response</a></li></ul><div class=tab-content><div class="tab-pane active" id=_customers__customer_id__orders_get_request><h3>URI Parameters</h3><ul><li><strong>customer_id</strong>: <em>required (string)</em></li></ul></div><div class=tab-pane id=_customers__customer_id__orders_get_response><h2>HTTP status code <a href=http://httpstatus.es/200 target=_blank>200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><small><strong>Example</strong>:<pre><code>[
- {
- 	"id":1,
- 	"customerId":1,
- 	"uri":"/customers/1/orders/1",
- 	"orderItems":[
- 		{
- 			"id":1,
- 			"uri":"/products/1/orders/1/orderItems/1",
- 			"productId":1,
- 			"name":"Lv bags",
- 			"price":{
- 				"amount":35.0,
- 				"currency":"CNY"
- 			},
- 			"quantity":1
- 		},
- 		{
- 			"id":1,
- 			"uri":"/products/1/orders/1/orderItems/1",
- 			"productId":1,
- 			"name":"Lv bags",
- 			"price":{
- 				"amount":35.0,
- 				"currency":"CNY"
- 			},
- 			"quantity":1
- 		}
- 	],
- 	"time":"2014-9-8 12:34:56"
- }
+  {
+    "id": 1,
+    "customerId": 1,
+    "uri": "/customers/1/orders/1",
+    "orderItems": [
+      {
+        "id": 1,
+        "uri": "/products/1/orders/1/orderItems/1",
+        "productId": 1,
+        "name": "Lv bags",
+        "price": {
+          "amount": 35.0,
+          "currency": "CNY"
+        },
+        "quantity": 1
+      },
+      {
+        "id": 1,
+        "uri": "/products/1/orders/1/orderItems/1",
+        "productId": 1,
+        "name": "Lv bags",
+        "price": {
+          "amount": 35.0,
+          "currency": "CNY"
+        },
+        "quantity": 1
+      }
+    ],
+    "status": "pending",
+    "totalPrice": {
+      "amount": 4555.0,
+      "currency": "CNY"
+    },
+    "payment": {
+    	"amount":4555.0,
+    	"currency":"CNY"
+    	},
+    "time": "2014-9-8 12:34:56"
+  }
 ]</code></pre></small></p></div></div></div></div></div></div><div class="modal fade" tabindex=0 id=_customers__customer_id__orders_post><div class=modal-dialog><div class=modal-content><div class=modal-header><button type=button class=close data-dismiss=modal aria-hidden=true>&times;</button><h4 class=modal-title id=myModalLabel><span class="badge badge_post">post</span> <span class=parent>/customers/{customer_id}</span>/orders</h4></div><div class=modal-body><div class="alert alert-info"><p>As a customer, I&#39;d like to place one order so that I can buy several products in one order.</p></div><ul class="nav nav-tabs"><li class=active><a href=#_customers__customer_id__orders_post_request data-toggle=tab>Request</a></li><li><a href=#_customers__customer_id__orders_post_response data-toggle=tab>Response</a></li></ul><div class=tab-content><div class="tab-pane active" id=_customers__customer_id__orders_post_request><h3>URI Parameters</h3><ul><li><strong>customer_id</strong>: <em>required (string)</em></li></ul><h3>Body</h3><p><strong>Type: application/json</strong></p><p><small><strong>Schema</strong>:<pre><code>{
   "$schema": "http://json-schema.org/schema",
   "type":"object",
@@ -309,4 +318,64 @@
  			"quantity":1
  		}
  	]
-}</code></pre></small></p></div><div class=tab-pane id=_customers__customer_id__orders_post_response><h2>HTTP status code <a href=http://httpstatus.es/201 target=_blank>201</a></h2></div></div></div></div></div></div></div></div></div></div></div><div class=col-md-3><div id=sidebar class="hidden-print affix" role=complementary><ul class="nav nav-pills nav-stacked"><li><a href=#_products>/products</a></li><li><a href=#_customers__customer_id_>/customers/{customer_id}</a></li></ul></div></div></div></div></body></html>
+}</code></pre></small></p></div><div class=tab-pane id=_customers__customer_id__orders_post_response><h2>HTTP status code <a href=http://httpstatus.es/201 target=_blank>201</a></h2></div></div></div></div></div></div></div><div class="panel panel-white"><div class=panel-heading><h4 class=panel-title><a class=collapsed data-toggle=collapse href=#panel__customers__customer_id__orders__order_id_><span class=parent>/customers/{customer_id}/orders</span>/{order_id}</a> <span class=methods><a href=# data-toggle=modal data-target=#_customers__customer_id__orders__order_id__get><span class="badge badge_get">get</span></a> <a href=# data-toggle=modal data-target=#_customers__customer_id__orders__order_id__delete><span class="badge badge_delete">delete</span></a></span></h4></div><div id=panel__customers__customer_id__orders__order_id_ class="panel-collapse collapse"><div class=panel-body><div class=list-group><a href=# data-toggle=modal data-target=#_customers__customer_id__orders__order_id__get class=list-group-item><span class="badge badge_get">get</span><div class=method_description><p>As a customer, I&#39;d like to see specific order so that I know the detailed info of this order.</p></div><div class=clearfix></div></a> <a href=# data-toggle=modal data-target=#_customers__customer_id__orders__order_id__delete class=list-group-item><span class="badge badge_delete">delete</span><div class=method_description><p>As a customer, I&#39;d like to delete one of my active orders when I don&#39;t want to purchase this order any more.</p></div><div class=clearfix></div></a></div></div></div><div class="modal fade" tabindex=0 id=_customers__customer_id__orders__order_id__get><div class=modal-dialog><div class=modal-content><div class=modal-header><button type=button class=close data-dismiss=modal aria-hidden=true>&times;</button><h4 class=modal-title id=myModalLabel><span class="badge badge_get">get</span> <span class=parent>/customers/{customer_id}/orders</span>/{order_id}</h4></div><div class=modal-body><div class="alert alert-info"><p>As a customer, I&#39;d like to see specific order so that I know the detailed info of this order.</p></div><ul class="nav nav-tabs"><li class=active><a href=#_customers__customer_id__orders__order_id__get_request data-toggle=tab>Request</a></li><li><a href=#_customers__customer_id__orders__order_id__get_response data-toggle=tab>Response</a></li></ul><div class=tab-content><div class="tab-pane active" id=_customers__customer_id__orders__order_id__get_request><h3>URI Parameters</h3><ul><li><strong>customer_id</strong>: <em>required (string)</em></li><li><strong>order_id</strong>: <em>required (string)</em></li></ul></div><div class=tab-pane id=_customers__customer_id__orders__order_id__get_response><h2>HTTP status code <a href=http://httpstatus.es/200 target=_blank>200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><small><strong>Example</strong>:<pre><code> {
+ 	"id":1,
+ 	"customerId":1,
+ 	"uri":"/customers/1/orders/1",
+ 	"orderItems":[
+ 		{
+ 			"id":1,
+ 			"uri":"/products/1/orders/1/orderItems/1",
+ 			"productId":1,
+ 			"name":"Lv bags",
+ 			"price":{
+ 				"amount":35.0,
+ 				"currency":"CNY"
+ 			},
+ 			"quantity":1
+ 		},
+ 		{
+ 			"id":1,
+ 			"uri":"/products/1/orders/1/orderItems/1",
+ 			"productId":1,
+ 			"name":"Lv bags",
+ 			"price":{
+ 				"amount":35.0,
+ 				"currency":"CNY"
+ 			},
+ 			"quantity":1
+ 		}
+ 	],
+ 	"totalPrice":{
+ 		"amount":4555.0,
+ 		"currency": "CNY"
+ 	},
+ 	"status":"active",
+ 	"payment":null,
+ 	"time":"2014-9-8 12:34:56"
+ }</code></pre></small></p></div></div></div></div></div></div><div class="modal fade" tabindex=0 id=_customers__customer_id__orders__order_id__delete><div class=modal-dialog><div class=modal-content><div class=modal-header><button type=button class=close data-dismiss=modal aria-hidden=true>&times;</button><h4 class=modal-title id=myModalLabel><span class="badge badge_delete">delete</span> <span class=parent>/customers/{customer_id}/orders</span>/{order_id}</h4></div><div class=modal-body><div class="alert alert-info"><p>As a customer, I&#39;d like to delete one of my active orders when I don&#39;t want to purchase this order any more.</p></div><ul class="nav nav-tabs"><li class=active><a href=#_customers__customer_id__orders__order_id__delete_request data-toggle=tab>Request</a></li><li><a href=#_customers__customer_id__orders__order_id__delete_response data-toggle=tab>Response</a></li></ul><div class=tab-content><div class="tab-pane active" id=_customers__customer_id__orders__order_id__delete_request><h3>URI Parameters</h3><ul><li><strong>customer_id</strong>: <em>required (string)</em></li><li><strong>order_id</strong>: <em>required (string)</em></li></ul></div><div class=tab-pane id=_customers__customer_id__orders__order_id__delete_response><h2>HTTP status code <a href=http://httpstatus.es/204 target=_blank>204</a></h2></div></div></div></div></div></div></div><div class="panel panel-white"><div class=panel-heading><h4 class=panel-title><a class=collapsed data-toggle=collapse href=#panel__customers__customer_id__orders__order_id__orderItems><span class=parent>/customers/{customer_id}/orders/{order_id}</span>/orderItems</a> <span class=methods><a href=# data-toggle=modal data-target=#_customers__customer_id__orders__order_id__orderItems_get><span class="badge badge_get">get</span></a> <a href=# data-toggle=modal data-target=#_customers__customer_id__orders__order_id__orderItems_post><span class="badge badge_post">post</span></a> <a href=# data-toggle=modal data-target=#_customers__customer_id__orders__order_id__orderItems_delete><span class="badge badge_delete">delete</span></a></span></h4></div><div id=panel__customers__customer_id__orders__order_id__orderItems class="panel-collapse collapse"><div class=panel-body><div class=list-group><a href=# data-toggle=modal data-target=#_customers__customer_id__orders__order_id__orderItems_get class=list-group-item><span class="badge badge_get">get</span><div class=method_description><p>As a customer, I&#39;d like to see all the order items that I have engaged in my order so that I can know if I have bought all what I need.</p></div><div class=clearfix></div></a> <a href=# data-toggle=modal data-target=#_customers__customer_id__orders__order_id__orderItems_post class=list-group-item><span class="badge badge_post">post</span><div class=method_description><p>As a customer, I&#39;d like to add one order item to my order.</p></div><div class=clearfix></div></a> <a href=# data-toggle=modal data-target=#_customers__customer_id__orders__order_id__orderItems_delete class=list-group-item><span class="badge badge_delete">delete</span><div class=method_description><p>As a customer, I&#39;d like to delete one of my order items when I don&#39;t want this order Item to be bought.</p></div><div class=clearfix></div></a></div></div></div><div class="modal fade" tabindex=0 id=_customers__customer_id__orders__order_id__orderItems_get><div class=modal-dialog><div class=modal-content><div class=modal-header><button type=button class=close data-dismiss=modal aria-hidden=true>&times;</button><h4 class=modal-title id=myModalLabel><span class="badge badge_get">get</span> <span class=parent>/customers/{customer_id}/orders/{order_id}</span>/orderItems</h4></div><div class=modal-body><div class="alert alert-info"><p>As a customer, I&#39;d like to see all the order items that I have engaged in my order so that I can know if I have bought all what I need.</p></div><ul class="nav nav-tabs"><li class=active><a href=#_customers__customer_id__orders__order_id__orderItems_get_request data-toggle=tab>Request</a></li><li><a href=#_customers__customer_id__orders__order_id__orderItems_get_response data-toggle=tab>Response</a></li></ul><div class=tab-content><div class="tab-pane active" id=_customers__customer_id__orders__order_id__orderItems_get_request><h3>URI Parameters</h3><ul><li><strong>customer_id</strong>: <em>required (string)</em></li><li><strong>order_id</strong>: <em>required (string)</em></li></ul></div><div class=tab-pane id=_customers__customer_id__orders__order_id__orderItems_get_response><h2>HTTP status code <a href=http://httpstatus.es/200 target=_blank>200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><small><strong>Example</strong>:<pre><code>[
+  {
+    "id": 1,
+    "uri": "/products/1/orders/1/orderItems/1",
+    "productId": 1,
+    "name": "Lv bags",
+    "price": {
+      "amount": 35.0,
+      "currency": "CNY"
+    },
+    "quantity": 1
+  }
+]</code></pre></small></p></div></div></div></div></div></div><div class="modal fade" tabindex=0 id=_customers__customer_id__orders__order_id__orderItems_post><div class=modal-dialog><div class=modal-content><div class=modal-header><button type=button class=close data-dismiss=modal aria-hidden=true>&times;</button><h4 class=modal-title id=myModalLabel><span class="badge badge_post">post</span> <span class=parent>/customers/{customer_id}/orders/{order_id}</span>/orderItems</h4></div><div class=modal-body><div class="alert alert-info"><p>As a customer, I&#39;d like to add one order item to my order.</p></div><ul class="nav nav-tabs"><li class=active><a href=#_customers__customer_id__orders__order_id__orderItems_post_request data-toggle=tab>Request</a></li></ul><div class=tab-content><div class="tab-pane active" id=_customers__customer_id__orders__order_id__orderItems_post_request><h3>URI Parameters</h3><ul><li><strong>customer_id</strong>: <em>required (string)</em></li><li><strong>order_id</strong>: <em>required (string)</em></li></ul><h3>Body</h3><p><strong>Type: application/json</strong></p><p><small><strong>Example</strong>:<pre><code>{
+  "productId": 1,
+  "quantity": 1
+}</code></pre></small></p></div></div></div></div></div></div><div class="modal fade" tabindex=0 id=_customers__customer_id__orders__order_id__orderItems_delete><div class=modal-dialog><div class=modal-content><div class=modal-header><button type=button class=close data-dismiss=modal aria-hidden=true>&times;</button><h4 class=modal-title id=myModalLabel><span class="badge badge_delete">delete</span> <span class=parent>/customers/{customer_id}/orders/{order_id}</span>/orderItems</h4></div><div class=modal-body><div class="alert alert-info"><p>As a customer, I&#39;d like to delete one of my order items when I don&#39;t want this order Item to be bought.</p></div><ul class="nav nav-tabs"><li class=active><a href=#_customers__customer_id__orders__order_id__orderItems_delete_request data-toggle=tab>Request</a></li><li><a href=#_customers__customer_id__orders__order_id__orderItems_delete_response data-toggle=tab>Response</a></li></ul><div class=tab-content><div class="tab-pane active" id=_customers__customer_id__orders__order_id__orderItems_delete_request><h3>URI Parameters</h3><ul><li><strong>customer_id</strong>: <em>required (string)</em></li><li><strong>order_id</strong>: <em>required (string)</em></li></ul></div><div class=tab-pane id=_customers__customer_id__orders__order_id__orderItems_delete_response><h2>HTTP status code <a href=http://httpstatus.es/204 target=_blank>204</a></h2></div></div></div></div></div></div></div><div class="panel panel-white"><div class=panel-heading><h4 class=panel-title><a class=collapsed data-toggle=collapse href=#panel__customers__customer_id__orders__order_id__orderItems__order_item_id_><span class=parent>/customers/{customer_id}/orders/{order_id}/orderItems</span>/{order_item_id}</a> <span class=methods><a href=# data-toggle=modal data-target=#_customers__customer_id__orders__order_id__orderItems__order_item_id__get><span class="badge badge_get">get</span></a></span></h4></div><div id=panel__customers__customer_id__orders__order_id__orderItems__order_item_id_ class="panel-collapse collapse"><div class=panel-body><div class=list-group><a href=# data-toggle=modal data-target=#_customers__customer_id__orders__order_id__orderItems__order_item_id__get class=list-group-item><span class="badge badge_get">get</span><div class=method_description><p>As a customer, I&#39;d like to see one of the specific order item in my order so that I can see the detailed info of this order item.</p></div><div class=clearfix></div></a></div></div></div><div class="modal fade" tabindex=0 id=_customers__customer_id__orders__order_id__orderItems__order_item_id__get><div class=modal-dialog><div class=modal-content><div class=modal-header><button type=button class=close data-dismiss=modal aria-hidden=true>&times;</button><h4 class=modal-title id=myModalLabel><span class="badge badge_get">get</span> <span class=parent>/customers/{customer_id}/orders/{order_id}/orderItems</span>/{order_item_id}</h4></div><div class=modal-body><div class="alert alert-info"><p>As a customer, I&#39;d like to see one of the specific order item in my order so that I can see the detailed info of this order item.</p></div><ul class="nav nav-tabs"><li class=active><a href=#_customers__customer_id__orders__order_id__orderItems__order_item_id__get_request data-toggle=tab>Request</a></li><li><a href=#_customers__customer_id__orders__order_id__orderItems__order_item_id__get_response data-toggle=tab>Response</a></li></ul><div class=tab-content><div class="tab-pane active" id=_customers__customer_id__orders__order_id__orderItems__order_item_id__get_request><h3>URI Parameters</h3><ul><li><strong>customer_id</strong>: <em>required (string)</em></li><li><strong>order_id</strong>: <em>required (string)</em></li><li><strong>order_item_id</strong>: <em>required (string)</em></li></ul></div><div class=tab-pane id=_customers__customer_id__orders__order_id__orderItems__order_item_id__get_response><h2>HTTP status code <a href=http://httpstatus.es/200 target=_blank>200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><small><strong>Example</strong>:<pre><code>{
+  "id": 1,
+  "uri": "/products/1/orders/1/orderItems/1",
+  "productId": 1,
+  "name": "Lv bags",
+  "price": {
+    "amount": 35.0,
+    "currency": "CNY"
+  },
+  "quantity": 1
+}</code></pre></small></p></div></div></div></div></div></div></div></div></div></div></div><div class=col-md-3><div id=sidebar class="hidden-print affix" role=complementary><ul class="nav nav-pills nav-stacked"><li><a href=#_products>/products</a></li><li><a href=#_customers__customer_id_>/customers/{customer_id}</a></li></ul></div></div></div></div></body></html>

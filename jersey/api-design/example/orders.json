@@ -1,32 +1,41 @@
 [
- {
- 	"id":1,
- 	"customerId":1,
- 	"uri":"/customers/1/orders/1",
- 	"orderItems":[
- 		{
- 			"id":1,
- 			"uri":"/products/1/orders/1/orderItems/1",
- 			"productId":1,
- 			"name":"Lv bags",
- 			"price":{
- 				"amount":35.0,
- 				"currency":"CNY"
- 			},
- 			"quantity":1
- 		},
- 		{
- 			"id":1,
- 			"uri":"/products/1/orders/1/orderItems/1",
- 			"productId":1,
- 			"name":"Lv bags",
- 			"price":{
- 				"amount":35.0,
- 				"currency":"CNY"
- 			},
- 			"quantity":1
- 		}
- 	],
- 	"time":"2014-9-8 12:34:56"
- }
+  {
+    "id": 1,
+    "customerId": 1,
+    "uri": "/customers/1/orders/1",
+    "orderItems": [
+      {
+        "id": 1,
+        "uri": "/products/1/orders/1/orderItems/1",
+        "productId": 1,
+        "name": "Lv bags",
+        "price": {
+          "amount": 35.0,
+          "currency": "CNY"
+        },
+        "quantity": 1
+      },
+      {
+        "id": 1,
+        "uri": "/products/1/orders/1/orderItems/1",
+        "productId": 1,
+        "name": "Lv bags",
+        "price": {
+          "amount": 35.0,
+          "currency": "CNY"
+        },
+        "quantity": 1
+      }
+    ],
+    "status": "pending",
+    "totalPrice": {
+      "amount": 4555.0,
+      "currency": "CNY"
+    },
+    "payment": {
+    	"amount":4555.0,
+    	"currency":"CNY"
+    	},
+    "time": "2014-9-8 12:34:56"
+  }
 ]

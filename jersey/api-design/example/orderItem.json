@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "uri": "/products/1/orders/1/orderItems/1",
+  "productId": 1,
+  "name": "Lv bags",
+  "price": {
+    "amount": 35.0,
+    "currency": "CNY"
+  },
+  "quantity": 1
+}
