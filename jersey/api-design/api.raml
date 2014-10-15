@@ -121,6 +121,22 @@ mediaType: application/json
                 body:
                   application/json:
                     example: !include example/orderItem.json
-      /
+      /payment:
+        get:
+          description: As a customer, I would like to see the payment of this order so that I know how much I have paid for this order.
+          responses:
+            200:
+              body:
+                application/json:
+                  example: !include example/payment.json
+        post:
+          description: As a customer, I'd like to pay one order when I want the products in the order.
+          body:
+            application/json:
+              example: !include example/payment_post.json
+          responses:
+            201:
+
+
 
 
