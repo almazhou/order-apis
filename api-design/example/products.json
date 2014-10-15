@@ -1,0 +1,26 @@
+[
+  {
+    "id":1,
+    "uri":"/products/1",
+    "name": "LV bags",
+    "category": "Bags",
+    "imageUrl": "/image/lv.png",
+    "description": "LV bags, luxury, life style",
+    "price": {
+      "amount": 33.0,
+      "currency": "USD"
+    }
+  },
+  {
+    "id":2,
+    "uri":"/products/2",
+    "name": "T-shirt of Yishion",
+    "category": "Clothes",
+    "imageUrl": "/image/tshirt.png",
+    "description": "T-shirt of the famous brand of Yishion, very comfortable and lasts very long time",
+    "price": {
+      "amount": 190.0,
+      "currency": "USD"
+    }
+  }
+]

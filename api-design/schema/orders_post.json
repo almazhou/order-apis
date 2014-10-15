@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "type":"object",
+  "properties":{
+    "orderItems":{
+      "type":"array",
+      "properties":{
+        "productId":{
+          "type":"string"
+        },
+        "quantity":{
+          "type":"number"
+        }
+      }
+    }
+
+    },
+  "required": [
+    "orderItems",
+    "productId",
+    "quantity"
+  ]
+}
